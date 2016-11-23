@@ -1,0 +1,54 @@
+
+
+#tasks {
+  .column {
+    min-height:65vh;
+  }
+}
+
+.task {
+  padding:0 10px;
+  border: 1px solid $border-color;
+  border-radius: $corner-radius;
+  margin:10px;
+  min-height:10em;
+  font-size:100%;
+  
+  h5 {
+    margin:0px -10px 5px -10px;
+    border-radius: 2px 2px 0px 0px;
+    text-align:left;
+    padding-left:5px;
+    color:#fff;
+    background-color:$brand-primary-grey-dark;
+    cursor:move;
+    
+    a {
+      color: #fff;
+      cursor:pointer;
+      &:hover{
+        color:$navbar-link-color;
+        text-decoration:none;
+      };
+    }
+  }
+  
+  .task-menu {
+    float:right;
+    padding-right:5px;
+    clear: break;
+  }
+  
+  .due-date {
+    float:right;
+    margin-left:1em;
+    a {
+      color: $link-color;
+      cursor:pointer;
+      &:hover{
+        text-decoration:none;
+        color: $link-hover-color;
+      };
+    }
+  }
+}
