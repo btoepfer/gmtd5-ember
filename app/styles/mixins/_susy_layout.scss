@@ -29,15 +29,15 @@ $susy: (
 }
 
 #logo {
-  @include span(3);
+  @include span(4);
 }
 
 #nav {
-  @include span(3 last);
+  @include span(4 last);
 }
 
 #search-form {
-  @include span(6);
+  @include span(4);
   //margin-left: span(2) + gutter();
   text-align: center;
 }

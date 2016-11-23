@@ -5,7 +5,7 @@
       <div id="logo">
         <div class="logo">
           <a class="logo" href="/">
-            <img title="Back to Start" alt="Start" height="50px" src="/assets/GmTD50-f331dd15b7c9bb94837fd82eabf5d16b0852d4a73be38eb6af1c15ea4f0560af.svg">
+            <img title="Back to Start" alt="Start" height="50px" src="http://gmtd5.gettingmythingsdone.de/assets/GmTD50-f331dd15b7c9bb94837fd82eabf5d16b0852d4a73be38eb6af1c15ea4f0560af.svg">
           </a>
         </div>
       </div>
@@ -21,27 +21,56 @@
         <nav class="nav">
           <ul class="nav">
             <li>
-              <a class="toggle-nav fa fa-bars" href="#"></a>
+              {{#link-to "projects"}}
+                {{fa-icon "check"}} Pojekte
+              {{/link-to }}
+            </li>
+            <li>
+              {{#link-to "tasks"}}
+                {{fa-icon "check"}} Aufgaben
+              {{/link-to }}
+            </li>
+            <li>
+              {{#link-to "notes"}}
+                {{fa-icon "file-text"}} Notizen
+              {{/link-to }}
             </li>
           </ul>
-          <div class="nav-mobile">
-            <ul class="nav">
-              <li>
-                <a href="#">
-                  <i class="fa fa-book"></i>
-                  Projekte
-                </a>
-              </li>
-              <li>
-                <a href="/tasks">
-                  <i class="fa fa-check"></i>
-                  Aufgaben
-                </a>
-              </li>
-            </ul>
-          </div>
         </nav>
       </div>
     </div>
   </div>
 </header>
+
+<div class="body">
+  <div class="wrap">
+    <div class="container">
+      {{outlet}}
+    </div>
+  </div>
+</div>
+
+<div id="footer">
+  <div class="container">
+    <div class="content-50-left">
+      <div class="text-left">
+        <span>
+          {{#link-to "about"}}
+            {{fa-icon "info-circle"}} Über uns
+          {{/link-to }}
+        </span>
+        <span>
+          {{#link-to "terms"}}
+            {{fa-icon "legal"}} Impressum
+          {{/link-to }}
+        </span>
+      </div>
+    </div>
+    <div class="content-50-right">
+      <div class="text-right">
+        <i class="fa fa-copyright"></i>
+        2016 - Bernd C. Toepfer
+      </div>
+    </div>
+  </div>
+</div>

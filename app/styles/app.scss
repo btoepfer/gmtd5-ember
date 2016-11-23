@@ -1,6 +1,5 @@
 
 // Fontawesome
-
 //@import "font-awesome";
 
 // SCSS
@@ -10,9 +9,10 @@
 @import "mixins/layout";
 @import "mixins/forms";
 @import "mixins/buttons";
-//@import "susy";
-//@import "mixins/susy_layout";
+@import "susy";
+@import "mixins/susy_layout";
 @import "mixins/gmtd5";
 @import "mixins/navigation";
 @import "mixins/tasks";
+@import "mixins/notes";
 
