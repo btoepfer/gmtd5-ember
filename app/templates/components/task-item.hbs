@@ -1,0 +1,24 @@
+<div class="task" id="{{task.id}}">
+  <h5 class="ui-sortable-handle">
+    <strong>
+    {{fa-icon "square-o"}}
+    </strong>
+    {{task.name}}
+    <div class="task-menu">
+      <a class="toggle-nav">
+        {{fa-icon bars}}
+      </a>
+    </div>
+  </h5>
+  <div>
+    <div class="due-date">
+      <a href="#">
+        {{fa-icon calendar}}
+        29.11.2016
+      </a>
+    </div>
+    <small>
+    {{task.content}}
+    </small>
+  </div>
+</div>
