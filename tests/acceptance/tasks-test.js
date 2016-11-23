@@ -20,7 +20,7 @@ test('should redirect to tasks', function (assert) {
 
 test('should link to information about the me.', function (assert) {
   visit('/');
-  click('a:contains("About")');
+  click('a:contains("Über uns")');
   andThen(function () {
     assert.equal(currentURL(), '/about', 'should navigate to about');
   });
