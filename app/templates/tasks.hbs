@@ -9,7 +9,9 @@
     </h4>
     <div class="column ui-sortable" id="status-0">
       {{#each model as |t|}}
-        {{task-item task=t}}
+        {{#if true}}
+          {{task-item task=t}}
+        {{/if}}
       {{/each}}
     </div>
   </div>
@@ -20,7 +22,9 @@
     </h4>
     <div class="column ui-sortable" id="status-1">
       {{#each model as |t|}}
-        {{task-item task=t}}
+        {{#if 't.status == 1'}}
+          {{task-item task=t}}
+        {{/if}}
       {{/each}}
     </div>
   </div>
@@ -30,6 +34,11 @@
       Erledigt
     </h4>
     <div class="column ui-sortable" id="status-2">
+      {{#each model as |t|}}
+        {{#if 't.status == 2'}}
+          {{task-item task=t}}
+        {{/if}}
+      {{/each}}
     </div>
   </div>
 </div>

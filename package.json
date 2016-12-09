@@ -46,6 +46,7 @@
     "glob": "^4.5.3",
     "http-proxy": "^1.16.0",
     "loader.js": "^4.0.10",
-    "morgan": "^1.7.0"
+    "morgan": "^1.7.0",
+    "rails-csrf": "2.0.1"
   }
 }
