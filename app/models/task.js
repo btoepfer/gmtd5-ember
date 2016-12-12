@@ -21,5 +21,14 @@ export default DS.Model.extend({
       icon_status = "";
     }
     return icon_status;
+  }),
+  statusTodo: Ember.computed('status', function() {
+    return (this.get('status') === 0);
+  }),
+  statusWorking: Ember.computed('status', function() {
+    return (this.get('status') === 1);
+  }),
+  statusDone: Ember.computed('status', function() {
+    return (this.get('status') === 2);
   })
 });
