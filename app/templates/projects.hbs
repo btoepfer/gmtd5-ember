@@ -1,4 +1,20 @@
 <div class="container">
-  {{page-header icon="book" title="Projekte"}}
+  {{page-header icon="book" title="Projekte" button="Neues Project" url="project.new"}}
 </div>
 
+<div id="projects">
+  <ul>
+  {{#each model as |project| }}
+    <li style="list-style: none">
+      <details>
+        <summary>
+          {{project.title}} 
+            <small>({{project.abbrDesc}})</small>
+        </summary>
+        <small>
+          {{project.description}}
+        </small>
+      </details></li>
+  {{/each}}
+  </ul>
+</div>

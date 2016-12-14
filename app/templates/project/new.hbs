@@ -1,0 +1,21 @@
+<section>
+  <form action="/projects" method="post">
+    <div class="form-group">
+      <label>Name</label>
+      {{input name="project[title]" value=model.title required='true' placeholder="Projektname" class="form-control text-bold-large" autofocus='autofocus'}}
+    </div>
+    
+    <div class="form-group">
+      <label>Beschreibung</label>
+      {{textarea name="project[description]" value=model.description placeholder="Genaue Beschreibung des Projekts" class="form-control" rows="5"}}
+    </div>
+    
+    <div class="form-group">
+      <button type="submit" class="btn">Speichern</button>&nbsp;
+      {{#link-to "projects"}}
+        Abbrechen
+      {{/link-to}}
+    </div>
+    
+  </form>
+</section>

@@ -1,0 +1,28 @@
+<section>
+  <form action="/tasks" method="post">
+    <div class="form-group">
+      <label>Name</label>
+      {{input name="task[name]" required='true' placeholder="Was ist zu tun?" class="form-control text-bold-large" 
+              autofocus='autofocus'}}
+    </div>
+  
+    <div class="form-group">
+      <label>Erledigen bis</label>
+      {{pikaday-input name="task[due_date]" class="form-control" required='true'}}
+    </div>
+  
+    <div class="form-group">
+      <label>Beschreibung</label>
+      {{textarea name="task[content]" placeholder="Genaue Beschreibung der Task" class="form-control" 
+              rows="5"}}
+    </div>
+  
+    <div class="form-group">
+      <button type="submit" class="btn">Speichern</button>&nbsp;
+      {{#link-to "tasks"}}
+      Abbrechen
+      {{/link-to}}
+    </div>
+  
+  </form>
+</section>

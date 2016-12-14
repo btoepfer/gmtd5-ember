@@ -1,5 +1,5 @@
 <div class="container">
-  {{page-header icon="check" title="Aufgaben"}}
+  {{page-header icon="check" title="Aufgaben" button="Neue Aufgabe" url="task.new"}}
 </div>
 <div id="tasks">
   <div class="content-33">
@@ -7,38 +7,44 @@
       {{fa-icon "square-o"}}
       To Do
     </h4>
-    <div class="column ui-sortable" id="status-0">
-      {{#each model as |t|}}
-        {{#if t.statusTodo}}
-          {{task-item task=t}}
+    {{#draggable-object-target action="updateStatus" status="0" dragOverAction='showTarget' dragOutAction='hideTarget'}}
+      {{#each model as |task|}}
+        {{#if task.statusTodo}}
+          {{#draggable-object content=task isSortable=true sortingScope="#tasks" dragHandle="h5"}}
+              {{task-item task=task}}
+          {{/draggable-object}}
         {{/if}}
       {{/each}}
-    </div>
+    {{/draggable-object-target}}
   </div>
   <div class="content-33">
     <h4>
       {{fa-icon "pencil-square-o"}}
       In Arbeit
     </h4>
-    <div class="column ui-sortable" id="status-1">
-      {{#each model as |t|}}
-        {{#if t.statusWorking}}
-          {{task-item task=t}}
+    {{#draggable-object-target action="updateStatus" status="1"}}
+      {{#each model as |task|}}
+        {{#if task.statusWorking}}
+          {{#draggable-object content=task isSortable=true sortingScope="#tasks" dragHandle="h5"}}
+              {{task-item task=task}}
+          {{/draggable-object}}
         {{/if}}
       {{/each}}
-    </div>
+    {{/draggable-object-target}}
   </div>
   <div class="content-33-last">
     <h4>
       {{fa-icon "check-square-o"}}
       Erledigt
     </h4>
-    <div class="column ui-sortable" id="status-2">
-      {{#each model as |t|}}
-        {{#if t.statusDone}}
-          {{task-item task=t}}
+    {{#draggable-object-target action="updateStatus" status="2"}}
+      {{#each model as |task|}}
+        {{#if task.statusDone}}
+          {{#draggable-object content=task isSortable=true sortingScope="#tasks" dragHandle="h5"}}
+              {{task-item task=task}}
+          {{/draggable-object}}
         {{/if}}
       {{/each}}
-    </div>
+    {{/draggable-object-target}}
   </div>
 </div>

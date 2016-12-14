@@ -1,9 +1,13 @@
 
 
 #tasks {
-  .column {
+  .draggable-object-target {
     min-height:65vh;
-  }
+  };
+  .active {
+    background-color:$brand-success; 
+    opacity:80%;
+  };
 }
 
 .task {

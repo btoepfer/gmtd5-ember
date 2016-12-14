@@ -12,6 +12,14 @@ Router.map(function() {
   this.route('terms');
   this.route('projects');
   this.route('notes');
+
+  this.route('task', function() {
+    this.route('new');
+  });
+
+  this.route('project', function() {
+    this.route('new');
+  });
 });
 
 export default Router;

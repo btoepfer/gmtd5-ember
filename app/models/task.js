@@ -5,6 +5,7 @@ export default DS.Model.extend({
   name: DS.attr("string"),
   status: DS.attr("number"),
   dueDate: DS.attr("date"),
+  content: DS.attr("string"),
   statusIcon: Ember.computed('status', function() {
     let icon_status;
     switch (this.get('status')) {
