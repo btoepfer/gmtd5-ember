@@ -1,5 +1,5 @@
 <div class="container">
-  {{page-header icon="book" title="Projekte" button="Neues Project" url="project.new"}}
+  {{page-header icon="book" title="Projekte" button="Neues Projekt" url="project.new"}}
 </div>
 
 <div id="projects">
@@ -8,8 +8,16 @@
     <li style="list-style: none">
       <details>
         <summary>
-          {{project.title}} 
-            <small>({{project.abbrDesc}})</small>
+          {{#link-to 'project.show' project.id}}
+            {{project.title}}
+          {{/link-to}} 
+          <small>({{project.abbrDesc}})</small>
+          {{#link-to 'project.edit' project.id}}
+            {{fa-icon "pencil"}}
+          {{/link-to}}
+          <a {{action 'delete' project}}>
+            {{fa-icon "trash" }}
+          </a>
         </summary>
         <small>
           {{project.description}}

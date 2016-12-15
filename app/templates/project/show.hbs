@@ -1,0 +1,12 @@
+<details>
+  <summary>
+    {{model.title}} 
+      <small>({{model.abbrDesc}})</small>
+      {{#link-to 'project.edit' model.id}}
+      {{fa-icon "pencil"}}
+      {{/link-to}}
+  </summary>
+  <small>
+    {{model.description}}
+  </small>
+</details>

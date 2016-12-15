@@ -19,7 +19,10 @@ Router.map(function() {
 
   this.route('project', function() {
     this.route('new');
+    this.route('show', { path: '/:id' });
+    this.route('edit', { path: '/:project_id' });
   });
+  
 });
 
 export default Router;

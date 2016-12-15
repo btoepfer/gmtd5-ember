@@ -11,7 +11,6 @@ export default Ember.Controller.extend({
        function failure(reason) {
          console.log(reason);
         }
-      
         project.save().then(transitionToProjects).catch(failure);
       }
     }

@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   actions: {
-    save(project) {
+    delete(project) {
       const self = this;
         function transitionToProjects() {
           self.transitionToRoute('projects');
@@ -11,8 +11,10 @@ export default Ember.Controller.extend({
        function failure(reason) {
          console.log(reason);
         }
-      
-        project.save().then(transitionToProjects).catch(failure);
+        
+        if (confirm(`Möchten Sie dieses Projekt löschen?`)) {
+          project.destroyRecord().then(transitionToProjects).catch(failure);
+        } 
       }
     }
 });
